@@ -4,10 +4,10 @@ import ReactDOM from "react-dom";
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
 
 const Statistic = ({ text, value }) => (
-  <p>
-    {text}
-    {value}
-  </p>
+  <tr>
+    <td>{text}</td>
+    <td>{value}</td>
+  </tr>
 );
 
 const Statistics = (props) => {
