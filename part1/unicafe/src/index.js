@@ -17,17 +17,19 @@ const Statistics = (props) => {
     return <div>No feedback given</div>;
   }
   return (
-    <div>
-      <Statistic text="good" value={good} />
-      <Statistic text="neutral" value={neutral} />
-      <Statistic text="bad" value={bad} />
-      <Statistic text="all" value={allClicks} />
-      <Statistic
-        text="average"
-        value={allClicks.reduce((x, y) => x + y) / allClicks.length}
-      />
-      <Statistic text="positive" value={positive} />
-    </div>
+    <table>
+      <tbody>
+        <Statistic text="good" value={good} />
+        <Statistic text="neutral" value={neutral} />
+        <Statistic text="bad" value={bad} />
+        <Statistic text="all" value={allClicks.length} />
+        <Statistic
+          text="average"
+          value={allClicks.reduce((x, y) => x + y) / allClicks.length}
+        />
+        <Statistic text="positive" value={positive} />
+      </tbody>
+    </table>
   );
 };
 
